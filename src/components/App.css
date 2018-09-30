@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+  margin: auto;
+  /* background-color: brown; */
+  display: grid;
+  grid-template-columns: 1fr 20rem 22rem 20rem 40rem 1fr;
+  grid-template-rows: 50vh 30vh;
+}
+@media only screen and (max-width: 50em) {
+  .App{
+    grid-template-columns: 1fr 0rem 22rem 20rem 20rem 1fr;
+    grid-template-rows: 30vh 30vh 30vh;
+  } }

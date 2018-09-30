@@ -1,5 +1,18 @@
-body {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  box-sizing: inherit; }
+  
+html{
+  box-sizing: border-box;
+  font-size: 62.5%; /*1rem = 10px*/
+  font-family: 'Josefin Sans', sans-serif;
 }
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 50%; } }
+@media only screen and (max-width: 31.25em) {
+  html {
+    font-size: 40%; } }

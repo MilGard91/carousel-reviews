@@ -1,0 +1,227 @@
+.Carousel {
+  /* position: relative; */
+  grid-row: 1/3;
+  grid-column: 2/5;
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: nowrap;
+  padding: 3rem 0rem 3rem 3rem;
+  overflow: hidden;
+}
+.Selected {
+  grid-row: 1/3;
+  grid-column: 4/5;
+  transition-duration: 0.3s;
+  position: relative;
+  width: 20rem;
+  overflow: hidden;
+}
+.Selected-change img{
+  position: relative; 
+  animation: selected-change;
+  animation-duration:0.3s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.Selected img{
+  position: absolute;
+  bottom: 3rem;
+  left: 0;
+  height: 40rem;
+  
+}
+
+.Select-1{
+  animation: selected-1;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.Select-1 img{
+  animation: image-translate;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-duration:0.3s
+
+}
+.Select-2 img{
+  animation: image-translate;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-duration:0.5s
+
+}
+.Select-3 img {
+  animation: image-translate;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-duration:0.6s
+
+} 
+.Select-2{
+  animation: selected-2;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.Select-3{
+  animation: selected-3;
+  animation-duration: 0.6s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.Button {
+  position: relative;
+  transform: translateX(-42rem);
+  display: inline-block;
+  flex-shrink: 0;
+  margin-left: 3rem;
+  width: 10rem;
+  height: 10rem;
+  color: white;
+  z-index: 100;
+  overflow: hidden;
+}
+.Button img{
+  transform: translateX(-20%) translateY(-20%);
+  width: 20rem;
+  height: 40rem;
+}
+.Button-select-1{
+  animation: select-1;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+}
+.Button-select-2{
+  animation: select-2;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+}
+.Button-select-3{
+  animation: select-3;
+  animation-duration: 0.6s;
+  animation-timing-function: linear;
+}
+@keyframes select-1 {
+  0% {transform: translateX(-42rem); }
+  50% {transform: translateX(-35.5rem);}
+  100% {transform: translateX(-29rem);}
+}
+@keyframes select-2 {
+  0% {transform: translateX(-42rem); }
+  50% {transform: translateX(-29rem);}
+  100% {transform: translateX(-16rem);}
+}
+@keyframes select-3 {
+  0% {transform: translateX(-42rem); }
+  50% {transform: translateX(-22.5rem);}
+  100% {transform: translateX(-3rem);}
+}
+@keyframes selected-1{
+  0%{
+    transform: translateX(-42rem);
+    height: 10rem;
+    width: 10rem;
+  }
+  50%{
+    transform: translateX(-35.5rem);
+    height: 20rem;
+    width: 15rem;
+  }
+  90%{
+    transform: translateX(-29rem);
+    height: 40rem;
+    width: 20rem;
+  }
+  100%{
+    transform: translateX(-29rem);
+    height: 40rem;
+    width: 20rem;
+    display: none;
+  }
+}
+@keyframes selected-2{
+  0%{
+    transform: translateX(-42rem);
+    height: 10rem;
+    width: 10rem;
+  }
+  50%{
+    transform: translateX(-29rem);
+    height: 20rem;
+    width: 15rem;
+  }
+  90%{
+    transform: translateX(-16rem);
+    height: 40rem;
+    width: 20rem;
+  }
+  100%{
+    transform: translateX(-16rem);
+    height: 40rem;
+    width: 20rem;
+    display:none;
+  }
+}
+@keyframes selected-3{
+  0%{
+    transform: translateX(-42rem);
+    height: 10rem;
+    width: 10rem;
+  }
+  50%{
+    transform: translateX(-22.5rem);
+    height: 20rem;
+    width: 15rem;
+  }
+  90%{
+    transform: translateX(-3rem);
+    height: 40rem;
+    width: 20rem;
+  }
+  100%{
+    transform: translateX(-16rem);
+    height: 40rem;
+    width: 20rem;
+    display: none;
+  }
+}
+@keyframes selected-change{
+  0%{
+    transform: translateX(0rem);
+    height: 40rem;
+    opacity: 1;
+  }
+  50%{
+    transform: translateX(10rem);
+    height: 20rem;
+    opacity: 0.7;
+  }
+  100%{
+    transform: translateX(20rem);
+    height: 10rem;
+    opacity: 0;
+  }
+}
+@keyframes image-translate{
+  0%{
+    transform: translateX(-20%) translateY(-20%);
+  }
+  50%{
+    transform: translateX(-10%) translateY(-10%);
+  }
+  100%{
+    transform: translateX(0%) translateY(0%);
+  }
+}
+
+@media only screen and (max-width: 50em) {
+  .Carousel{
+    grid-column: 3/6;
+  }
+  .Selected {
+    grid-column: 5/6;
+  }
+}
