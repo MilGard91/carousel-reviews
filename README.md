@@ -6,5 +6,5 @@
 ### Development
   For development was used react 16 with create-react-app command.
 
-##Testing instruction
+## Testing instruction
   Download the code and run npm start
